@@ -12,4 +12,4 @@ install: install-no-dep
 install-no-dep:
 	install -D i3/config ${HOME}/.config/i3/
 	install -D nvim/init.vim ${HOME}/.config/nvim/
-
+	install -D zsh/.zshrc ${HOME}/.zshrc
