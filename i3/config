@@ -6,7 +6,7 @@
 set $mod Mod1
 
 # Window bar fonts
-font pango:Fira Code Regular 11
+font pango:Fira Code Regular 11, DejaVu Sans Mono 10
 
 # i3-gaps
 for_window [class=".*"] border pixel 0
@@ -26,14 +26,17 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-flashback
 
-# start a aerminal
+# start a Terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+# Background with nitrogen
+exec --no-startup-id nitrogen --restore
 
 # kill focused window
 bindsym $mod+Shift+A kill
 
 # nm-applet for network config
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Launches rofi with Fira Code Medium font. Explanaition of the all the lines can be found here: 
 #
