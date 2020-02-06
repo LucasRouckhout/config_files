@@ -7,7 +7,7 @@ refresh:
 	cp ${HOME}/.config/nvim/init.vim nvim/
 
 install:
-	sh install.sh
-	cp ./i3/config ${HOME}/.config/i3/
-	cp ./nvim/init.vim ${HOME}/.config/nvim/
+	sudo sh install.sh
+	install -D i3/config ${HOME}/.config/i3/
+	install -D nvim/init.vim ${HOME}/.config/nvim/
 
