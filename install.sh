@@ -1,7 +1,4 @@
-# i3 needs:
-#	- nitrogen
-#	- gnome-flashback
-#	- rofi
+#!/bin/sh
 echo "####### Installing dependencies needed for i3"
 
 apt install zsh fonts-font-awesome nitrogen python3-tk gnome-flashback pulseaudio-utils rofi i3-gaps python3-pip xbacklight dbus volumeicon-alsa numlockx -y
