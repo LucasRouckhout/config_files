@@ -22,9 +22,9 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="JetBrains Toolbox"] floating enable
 
 # i3-gnome: https://github.com/i3-gnome/i3-gnome
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id gnome-flashback
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id gnome-flashback
 
 # start a Terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -35,8 +35,14 @@ exec --no-startup-id nitrogen --restore
 # Volumeicon tray
 exec --no-startup-id volumeicon
 
+# Numlock on
+exec_always --no-startup-id numlockx on
+
 # kill focused window
 bindsym $mod+Shift+A kill
+
+# i3lock
+bindsym Mod1+Shift+q exec i3lock -t -i "$HOME/Pictures/wallpaper.png" 
 
 # nm-applet for network config
 # exec --no-startup-id nm-applet
@@ -162,7 +168,7 @@ bindsym $mod+r mode "resize"
 # My i3bar config
 bar {
         status_command $HOME/.local/bin/bumblebee-status \
-	    -m spotify cpu time system \
+	    -m spotify cpu time \
 	    -t gruvbox-powerline \
 	    -p time.format="%H:%M"
 	position top
