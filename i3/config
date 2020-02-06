@@ -1,6 +1,6 @@
 # i3 config by Lucas Rouckhout
-#	Test
-# This file should be placed here: $HOME/.config/i3/config
+#	
+#This file should be placed here: $HOME/.config/i3/config
 
 # The mod key is set to Alt
 set $mod Mod1
@@ -31,6 +31,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # Background with nitrogen
 exec --no-startup-id nitrogen --restore
+
+# Volumeicon tray
+exec --no-startup-id volumeicon
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -158,12 +161,15 @@ bindsym $mod+r mode "resize"
 
 # My i3bar config
 bar {
-        status_command i3status
+        status_command $HOME/.local/bin/bumblebee-status \
+	    -m spotify cpu time system \
+	    -t gruvbox-powerline \
+	    -p time.format="%H:%M"
 	position top
 	#mode hide
 	#modifier $mod
-	tray_output primary
-	font pango:Fira Code Regular 11
+	#tray_output primary
+	#font pango:Fira Code Regular 11
 
 	colors {
 		background #292929
