@@ -42,7 +42,7 @@ exec_always --no-startup-id numlockx on
 bindsym $mod+Shift+A kill
 
 # i3lock
-bindsym Mod1+Shift+q exec i3lock -t -i "$HOME/Pictures/wallpaper.png" 
+bindsym Mod1+Shift+q exec i3lock -t -i "$HOME/Pictures/wallpaper.png" -p "win"
 
 # nm-applet for network config
 # exec --no-startup-id nm-applet
