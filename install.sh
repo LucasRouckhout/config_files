@@ -8,3 +8,4 @@ pip3 install --user psutil i3ipc
 echo "####### You will also need neovim..."
 
 apt install python3-neovim -y
+echo "####### DONT FORGET TO INSTALL COC.NVIM EXTENSIONS"

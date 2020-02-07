@@ -17,6 +17,8 @@ set number
 set autoindent
 set cindent
 set noexpandtab
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set termguicolors
 
@@ -28,3 +30,7 @@ let g:ale_fix_on_save = 1
 let g:gruvbox_italic=1
 set termguicolors
 colorscheme gruvbox
+
+" SuperTab pressing enter does completion and scroll down when pressing tab.
+let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
