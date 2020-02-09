@@ -38,3 +38,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " NERDTree toggle with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+" Coc LSP completion settings.
+set cmdheight=2
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+
