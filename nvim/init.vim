@@ -10,6 +10,7 @@ Plug 'shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'raimondi/delimitmate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Basic settings
@@ -34,3 +35,6 @@ colorscheme gruvbox
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" NERDTree toggle with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
