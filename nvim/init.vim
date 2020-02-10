@@ -31,6 +31,7 @@ let g:ale_fix_on_save = 1
 let g:gruvbox_italic=1
 set termguicolors
 colorscheme gruvbox
+set background=dark
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
