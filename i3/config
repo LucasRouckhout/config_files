@@ -127,9 +127,9 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Moving specific windows to specific workspaces
 for_window [class="Brave-browser"] move to workspace $ws2
-for_window [class="Spotify"] move to workspace $ws3
+for_window [class="Spotify"] move to workspace $ws5
 for_window [class="Thunderbird"] move to workspace $ws4
-for_window [class="Gnome-calendar"] move to workspace $ws5
+for_window [class="Slack"] move to workspace $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
