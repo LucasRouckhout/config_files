@@ -11,9 +11,9 @@ antigen bundle kubectl
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Load the theme.
-antigen theme fishy
+#antigen theme fishy
 #antigen theme reobin/typewritten typewritten
-
+antigen theme robbyrussell
 # Tell Antigen that you're done.
 antigen apply
 
