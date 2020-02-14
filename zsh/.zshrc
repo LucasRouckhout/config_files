@@ -12,8 +12,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 # Load the theme.
 #antigen theme fishy
-#antigen theme reobin/typewritten typewritten
-antigen theme robbyrussell
+antigen theme reobin/typewritten typewritten
+
 # Tell Antigen that you're done.
 antigen apply
 
