@@ -8,7 +8,7 @@ antigen bundle git
 antigen bundle cargo
 antigen bundle ubuntu
 antigen bundle kubectl
-antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle zsh-users/zsh-autosuggestions
 
 # Load the theme.
 #antigen theme fishy
