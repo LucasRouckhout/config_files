@@ -11,6 +11,7 @@ Plug 'ervandew/supertab'
 Plug 'raimondi/delimitmate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
 " Basic settings
