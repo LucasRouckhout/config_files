@@ -14,6 +14,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
+"Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 " Basic settings
@@ -24,7 +25,7 @@ set noexpandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set termguicolors
+"set termguicolors
 set mouse=a
 
 " Ale Linters
@@ -43,9 +44,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 
 " Theme
-let g:gruvbox_italic=1
-set termguicolors
+set termguicolors     " enable true colors support
 colorscheme gruvbox
+let g:gruvbox_italic=1
 set background=dark
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
