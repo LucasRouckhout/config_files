@@ -13,27 +13,34 @@ for_window [class=".*"] border pixel 0
 gaps inner 12
 #smart_gaps on
 
+# set keymap
+exec --no-startup-id setxkbmap be
+
+# xfce4 tools
+exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Take screenshots with PrintScreen
+bindsym Print exec xfce4-screenshooter -f -s $HOME/Pictures
 
 # Some windows may still be opened in tilling mode:
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [class="JetBrains Toolbox"] floating enable
-
-# i3-gnome: https://github.com/i3-gnome/i3-gnome
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id gnome-flashback
 
 # start a Terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # Background with nitrogen
 exec --no-startup-id nitrogen --restore
 
 # Volumeicon tray
 exec --no-startup-id volumeicon
+
+# nm-applet
+exec --no-startup-id nm-applet
 
 # Numlock on
 exec_always --no-startup-id numlockx on
@@ -42,15 +49,12 @@ exec_always --no-startup-id numlockx on
 bindsym $mod+Shift+A kill
 
 # i3lock
-bindsym Mod1+Shift+q exec i3lock -t -i "$HOME/Pictures/wallpaper.png" -p "win"
-
-# nm-applet for network config
-# exec --no-startup-id nm-applet
+bindsym --release Mod1+Shift+q exec slock
 
 # Launches rofi with Fira Code Medium font. Explanaition of the all the lines can be found here: 
 #
 # https://wiki.archlinux.org/index.php/Rofi
-bindsym Super_L exec --no-startup-id "rofi -show drun -font \\"Fira Code Medium 11\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
+bindsym Mod1+space exec --no-startup-id "rofi -show drun -font \\"Fira Code Medium 11\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
 
 # Change focus to windows using the cursor keys.
 bindsym $mod+Left focus left
@@ -80,7 +84,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym Super_L focus mode_toggle
 
 # focus the parent container
 bindsym $mod+q focus parent
@@ -126,10 +130,9 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Moving specific windows to specific workspaces
-for_window [class="Brave-browser"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws5
-for_window [class="Thunderbird"] move to workspace $ws4
 for_window [class="Slack"] move to workspace $ws3
+for_window [class="firefox"] move to workspace $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -166,18 +169,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # My i3bar config
-bar {
-        status_command $HOME/.local/bin/bumblebee-status \
-	    -m spotify cpu time \
-	    -t gruvbox-powerline \
-	    -p time.format="%H:%M"
-	position top
-	#mode hide
-	#modifier $mod
-	#tray_output primary
-	font pango:Fira Code Regular 11
-
-	colors {
-		background #292929
-	}
-}
+#bar {
+#	position top
+#	font pango:Fira Code Regular 11
+#
+#	colors {
+#		background #282828
+#	}
+#}
