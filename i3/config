@@ -6,11 +6,11 @@
 set $mod Mod1
 
 # Window bar fonts
-font pango:Fira Code Regular 11, DejaVu Sans Mono 10
+font pango:Fira Sans Retina 11, DejaVu Sans Mono 10
 
 # i3-gaps
 for_window [class=".*"] border pixel 0
-gaps inner 12
+gaps inner 7
 #smart_gaps on
 
 # set keymap
@@ -29,6 +29,9 @@ bindsym Print exec xfce4-screenshooter -f -s $HOME/Pictures
 # Some windows may still be opened in tilling mode:
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+
+# Autostart bluetooth
+exec --no-startup-id blueman-applet
 
 # start a Terminal
 bindsym $mod+Return exec alacritty
@@ -54,7 +57,7 @@ bindsym --release Mod1+Shift+q exec slock
 # Launches rofi with Fira Code Medium font. Explanaition of the all the lines can be found here: 
 #
 # https://wiki.archlinux.org/index.php/Rofi
-bindsym Mod1+space exec --no-startup-id "rofi -show drun -font \\"Fira Code Medium 11\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
+bindsym Mod1+space exec --no-startup-id "rofi -show drun -font \\"Fira Sans Medium 11\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
 
 # Change focus to windows using the cursor keys.
 bindsym $mod+Left focus left

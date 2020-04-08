@@ -14,7 +14,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
-"Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 " Basic settings
@@ -25,19 +24,19 @@ set noexpandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-"set termguicolors
 set mouse=a
 
 " Ale Linters
-let g:ale_linters = { 'rust': ['rustfmt'] }
-let g:ale_fixers = { 'rust': ['rustfmt'], 'go': ['gofmt'], 
+let g:ale_linters = { 'rust': ['rustfmt'], 'typescript': ['prettier']}
+let g:ale_fixers = { 'rust': ['rustfmt'], 'go': ['gofmt'], 'typescript': ['prettier'], 
+\	'javascript': ['prettier'],
 \   'css': ['prettier'],
 \	'html': ['prettier'],
 \	'cpp': ['clang-format']
 \}
-let g:ale_c_clangformat_options = '-style="{IndentWidth: 4,TabWidth: 4,BasedOnStyle: Microsoft}"'
-"let g:ale_typescript_standard_options = '--single-quote'
-"let g:ale_javascript_prettier_options = '--single-quote'
+let g:ale_c_clangformat_options = '-style="{IndentWidth: 4,TabWidth: 4,BasedOnStyle: LLVM}"'
+let g:ale_typescript_standard_options = '--single-quote --use-tabs --jsx-bracket-same-line'
+let g:ale_javascript_prettier_options = '--single-quote --use-tabs --jsx-bracket-same-line'
 "let g:ale_java_javac_executable = "javac -cp /usr/local/share/lombok/lombok.jar"
 let g:ale_fix_on_save = 1
 
