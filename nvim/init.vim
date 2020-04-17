@@ -14,6 +14,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 " Basic settings
@@ -37,7 +38,7 @@ let g:ale_fixers = { 'rust': ['rustfmt'], 'go': ['gofmt'], 'typescript': ['prett
 let g:ale_c_clangformat_options = '-style="{IndentWidth: 4,TabWidth: 4,BasedOnStyle: LLVM}"'
 let g:ale_typescript_standard_options = '--single-quote --use-tabs --jsx-bracket-same-line'
 let g:ale_javascript_prettier_options = '--single-quote --use-tabs --jsx-bracket-same-line'
-"let g:ale_java_javac_executable = "javac -cp /usr/local/share/lombok/lombok.jar"
+let g:ale_java_javac_executable = "javac -cp /usr/local/share/lombok/lombok.jar"
 let g:ale_fix_on_save = 1
 
 " CtrlP
@@ -46,9 +47,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 " Theme
 set termguicolors     " enable true colors support
-colorscheme gruvbox
-let g:gruvbox_italic=1
-set background=dark
+colorscheme base16-default-dark
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
