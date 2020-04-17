@@ -3,16 +3,16 @@ source $HOME/antigen.zsh
 
 antigen use oh-my-zsh
 
-
 antigen bundle git
 antigen bundle cargo
-antigen bundle ubuntu
 antigen bundle kubectl
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme fishy
-#antigen theme reobin/typewritten typewritten
+#antigen theme fishy
+#antigen theme typewritten
+antigen theme gallois
 
 # Tell Antigen that you're done.
 antigen apply
@@ -20,11 +20,8 @@ antigen apply
 # Path to your oh-my-zsh installation.
 export ZSH="/home/lucas/.oh-my-zsh"
 
-# Set the zsh theme:
-#ZSH_THEME="typewritten"
-
-plugins=(git
-	ubuntu
+plugins=(
+	git
 	cargo
 	kubectl
 )
@@ -40,3 +37,5 @@ fi
 
 # Aliases
 alias vim="nvim"
+alias ll="ls -Al"
+alias l="ls -al"
