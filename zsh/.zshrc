@@ -12,13 +12,13 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Load the theme.
 #antigen theme fishy
 #antigen theme typewritten
-antigen theme gallois
+antigen theme pygmalion
 
 # Tell Antigen that you're done.
 antigen apply
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/lucas/.oh-my-zsh"
+export ZSH="/Users/lucasrouckhout/.oh-my-zsh"
 
 plugins=(
 	git
