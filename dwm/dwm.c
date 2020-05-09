@@ -59,7 +59,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeTitle }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -730,7 +730,7 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - sw - x) > bh) {
 		if (m->sel) {
-			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
+			drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
@@ -952,7 +952,6 @@ grabkeys(void)
 	{
 		unsigned int i, j;
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
-		KeyCode code;
 
 		XUngrabKey(dpy, AnyKey, AnyModifier, root);
 		for (i = 0; i < LENGTH(keys); i++)
@@ -986,7 +985,6 @@ void
 keypress(XEvent *e)
 {
 	unsigned int i;
-	KeyCode keysym;
 	XKeyEvent *ev;
 
 	ev = &e->xkey;
