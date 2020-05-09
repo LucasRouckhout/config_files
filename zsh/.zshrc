@@ -9,16 +9,18 @@ antigen bundle kubectl
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+autoload -U colors && colors	# Load colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 # Load the theme.
 #antigen theme fishy
 #antigen theme typewritten
-antigen theme pygmalion
+#antigen theme gallois
 
 # Tell Antigen that you're done.
 antigen apply
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lucasrouckhout/.oh-my-zsh"
+export ZSH="/home/lucas/.oh-my-zsh"
 
 plugins=(
 	git
