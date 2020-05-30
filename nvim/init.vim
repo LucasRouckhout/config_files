@@ -30,7 +30,11 @@ set noswapfile
 set nowrap
 set smartcase
 set incsearch
-set colorcolumn=80
+set cursorline
+
+" For coc.nvim
+set nobackup
+set nowritebackup
 
 " Fzf keybind
 nnoremap <C-p> :Files<CR>
@@ -50,6 +54,9 @@ map <C-n> :NERDTreeToggle<CR>
 set cmdheight=2
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gt <Plug>(coc-references)
+
+" For vim format
+let g:python3_host_prog='/usr/bin/python3'
 
 " Automatically organize go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')

@@ -37,3 +37,5 @@ fi
 alias vim="nvim"
 alias ll="ls -Al"
 alias l="ls -al"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
