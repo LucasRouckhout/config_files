@@ -13,7 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
