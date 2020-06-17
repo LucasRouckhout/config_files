@@ -13,7 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
-Plug 'gruvbox-community/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
@@ -30,18 +30,14 @@ set noswapfile
 set nowrap
 set smartcase
 set incsearch
-set cursorline
-
-" For coc.nvim
-set nobackup
-set nowritebackup
+"set colorcolumn=80
 
 " Fzf keybind
 nnoremap <C-p> :Files<CR>
 
 " Theme
-set background=dark
-colorscheme gruvbox
+"set background=dark
+"colorscheme gruvbox
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
@@ -54,9 +50,6 @@ map <C-n> :NERDTreeToggle<CR>
 set cmdheight=2
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gt <Plug>(coc-references)
-
-" For vim format
-let g:python3_host_prog='/usr/bin/python3'
 
 " Automatically organize go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
