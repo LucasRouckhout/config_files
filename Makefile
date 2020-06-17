@@ -1,15 +1,5 @@
-all:
-	@echo "Run:\n\tsudo make install\t--copies the config files to the correct location\n\tsudo make refresh\t--copy your local config files to this repo.\n"
 
-help: all
-refresh:
-	cp ${HOME}/.config/i3/config i3/
-	cp ${HOME}/.config/nvim/init.vim nvim/
+NVIM_DEST="$HOME/.config/nvim/"
 
-install: install-no-dep
-	sudo sh install.sh
-
-install-no-dep:
-	install -D i3/config ${HOME}/.config/i3/
-	install -D nvim/init.vim ${HOME}/.config/nvim/
-	install -D zsh/.zshrc ${HOME}/.zshrc
+clean:
+	rm 
