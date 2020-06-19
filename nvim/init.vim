@@ -37,8 +37,9 @@ set incsearch
 nnoremap <C-p> :Files<CR>
 
 " Theme
-"set background=dark
-colorscheme base16-default-dark
+set background=dark
+"set termguicolors
+colorscheme gruvbox
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
