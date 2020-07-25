@@ -6,13 +6,13 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle cargo
 antigen bundle kubectl
+antigen bundle helm
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-autoload -U colors && colors	# Load colors
-PROMPT="[%n@%M %~]%# "
-#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
+#autoload -U colors && colors	# Load colors
+#PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+ZSH_THEME=avit
 # Tell Antigen that you're done.
 antigen apply
 
@@ -23,6 +23,7 @@ plugins=(
 	git
 	cargo
 	kubectl
+	helm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -38,5 +39,7 @@ fi
 alias vim="nvim"
 alias ll="ls -Al"
 alias l="ls -al"
+
+# Export statements
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
