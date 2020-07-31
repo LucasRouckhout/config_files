@@ -16,6 +16,7 @@ Plug 'martinda/jenkinsfile-vim-syntax'
 Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'chriskempson/base16-vim'
+Plug 'mrk21/yaml-vim'
 call plug#end()
 
 " Basic settings

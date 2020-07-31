@@ -43,3 +43,4 @@ alias l="ls -al"
 # Export statements
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
+export PATH="/home/lucas/Programs/AndroidStudio/android-studio-ide-193.6626763-linux/android-studio/bin:$PATH"
