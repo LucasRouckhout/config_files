@@ -12,8 +12,10 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 #autoload -U colors && colors	# Load colors
 #PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-ZSH_THEME=avit
+
+#ZSH_THEME=risto
 # Tell Antigen that you're done.
+antigen theme candy
 antigen apply
 
 # Path to your oh-my-zsh installation.
