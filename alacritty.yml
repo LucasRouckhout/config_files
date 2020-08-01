@@ -1,13 +1,18 @@
+font:
+  size: 10.5
+
 colors:
   # Default colors
   primary:
-    
     # hard contrast: background = '#1d2021'
     background: '#1d2021'
     #background: '#282828'
     # soft contrast: background = '#32302f'
     foreground: '#ebdbb2'
 
+  cursor:
+    text:   '#2c2c2c'
+    cursor: '#d9d9d9'
   # Normal colors
   normal:
     black:   '#282828'
