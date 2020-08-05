@@ -39,8 +39,8 @@ fi
 
 # Aliases
 alias vim="nvim"
-alias ll="ls -Al"
-alias l="ls -al"
+alias ll="ls -hAl"
+alias l="ls -hal"
 
 # Export statements
 export PATH="/usr/local/opt/llvm/bin:$PATH"
