@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Sans Retina:size=12" };
+static const char *fonts[]          = { "Fira Sans Retina:size=10" };
 static const char dmenufont[]        = "monospace:size=10";
 static const char normfgcolor[]      = "#ebdbb2";
 static const char normbgcolor[]      = "#282828";
@@ -62,11 +62,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"rofi", "-show", "drun"};
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *lockcmd[]  = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier             key    function        argument */
 	{ MODKEY,               65,    spawn,          {.v = dmenucmd } }, // p
 	{ MODKEY,			    36,    spawn,          {.v = termcmd } }, // Return
+	{ MODKEY|ControlMask,	38,	   spawn,		   {.v = lockcmd } },
 	{ MODKEY,               56,    togglebar,      {0} },             // b
 	{ MODKEY,               44,    focusstack,     {.i = +1 } },      // j
 	{ MODKEY,               45,    focusstack,     {.i = -1 } },      // k
