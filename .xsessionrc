@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Xsessionrc for use with dwm.
+# Author: Lucas Rouckhout <lucas.rouckhout@gmail.com>
+
+# Multiple displays
+xrandr --output VGA-1-1 --auto --left-of HDMI-A-3
+
+# Wallpaper
+nitrogen --restore
+
+
