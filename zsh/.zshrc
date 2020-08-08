@@ -1,5 +1,5 @@
 # Antigen for installing plugins
-source $HOME/antigen.zsh
+source ~/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -10,12 +10,15 @@ antigen bundle helm
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-#autoload -U colors && colors	# Load colors
-#PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+autoload -U colors && colors	# Load colors and vcs_info
 
-#ZSH_THEME=risto
+# Needed for vcs_info
+autoload -Uz vcs_info
+precmd() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b%{$fg[yellow]%}\$vcs_info_msg_0_ "  
+
 # Tell Antigen that you're done.
-antigen theme candy
 antigen apply
 
 # Path to your oh-my-zsh installation.
@@ -43,6 +46,7 @@ alias ll="ls -hAl"
 alias l="ls -hal"
 
 # Export statements
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
 export PATH="/home/lucas/Programs/AndroidStudio/android-studio-ide-193.6626763-linux/android-studio/bin:$PATH"
