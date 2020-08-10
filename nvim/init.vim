@@ -8,8 +8,6 @@ Plug 'ervandew/supertab'
 Plug 'raimondi/delimitmate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
@@ -17,6 +15,8 @@ Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'chriskempson/base16-vim'
 Plug 'mrk21/yaml-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Basic settings
@@ -34,8 +34,8 @@ set smartcase
 set incsearch
 "set colorcolumn=80
 
-" Fzf keybind
-nnoremap <C-p> :Files<CR>
+" Use ripgrep
+nnoremap <C-p> :Rg<Cr>
 
 " Theme
 set background=dark
@@ -52,7 +52,6 @@ map <C-n> :NERDTreeToggle<CR>
 " Coc LSP completion settings.
 set cmdheight=2
 nmap <silent>gd <Plug>(coc-definition)
-nmap <silent>gt <Plug>(coc-references)
 
 " Automatically organize go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
