@@ -50,6 +50,7 @@ alias ll="ls -hAl"
 alias l="ls -hal"
 
 # Export statements
+export PATH="~/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
