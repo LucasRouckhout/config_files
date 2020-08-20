@@ -25,6 +25,9 @@ setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[b
 # Tell Antigen that you're done.
 antigen apply
 
+#bindkey "^[[1;5C" forward-word
+#bindkey "^[[1;5D" backward-word
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -53,5 +56,3 @@ alias l="ls -hal"
 export PATH="~/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/Users/lucas/Library/Python/3.7/bin:$PATH"
-export PATH="/home/lucas/Programs/AndroidStudio/android-studio-ide-193.6626763-linux/android-studio/bin:$PATH"
