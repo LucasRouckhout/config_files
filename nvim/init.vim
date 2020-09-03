@@ -13,7 +13,7 @@ Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
 Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
-Plug 'chriskempson/base16-vim'
+Plug 'vim-scripts/mako.vim'
 Plug 'mrk21/yaml-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
