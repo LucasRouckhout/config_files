@@ -7,29 +7,22 @@ antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme.
-#antigen theme af-magic
+antigen bundle git
+antigen bundle cargo
+antigen bundle ubuntu
+antigen bundle docker
+antigen bundle python
 
-# Tell Antigen that you're done.
-antigen apply
+# Load the theme.
+antigen theme bira
+
+plugins=(kubectl
+	helm)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(
-	git
-	cargo
-	kubectl
-	helm
-	ubuntu
-)
-
-ZSH_THEME="avit"
-
 source $ZSH/oh-my-zsh.sh
-
-# Dir colors
-#test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -47,6 +40,7 @@ alias l="ls -hal"
 export PATH="~/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
 
-
-
+# Tell Antigen that you're done.
+antigen apply
