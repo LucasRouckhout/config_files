@@ -6,19 +6,12 @@
 set $mod Mod1
 
 # Window bar fonts
-font pango:Fira Sans Retina 11, DejaVu Sans Mono 10
+font pango:Hack Regular 11, DejaVu Sans Mono 10
 
 # i3-gaps
 for_window [class=".*"] border pixel 3
 gaps inner 7
 #smart_gaps on
-
-# set keymap
-exec --no-startup-id setxkbmap be
-
-# xfce4 tools
-exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
