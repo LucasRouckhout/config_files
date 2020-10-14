@@ -14,7 +14,7 @@ antigen bundle docker
 antigen bundle python
 
 # Load the theme.
-antigen theme bira
+antigen theme sonicradish
 
 plugins=(kubectl
 	helm)
