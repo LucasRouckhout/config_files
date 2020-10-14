@@ -12,7 +12,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
 Plug 'martinda/jenkinsfile-vim-syntax'
 Plug 'morhetz/gruvbox'
-Plug 'chriskempson/base16-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-scripts/mako.vim'
 Plug 'mrk21/yaml-vim'
@@ -42,7 +41,7 @@ nnoremap <C-p> :Rg<Cr>
 " Theme
 set background=dark
 "set termguicolors
-colorscheme base16-default-dark
+colorscheme gruvbox
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
