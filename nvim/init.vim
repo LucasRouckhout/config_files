@@ -43,6 +43,16 @@ set background=dark
 "set termguicolors
 colorscheme gruvbox
 
+
+" This super handy piece of code simply selects the current python interpreter
+" you are using (i.e your venv). This means that you will have to install:
+" neovim in each venv you create though. This will also automatically use the
+" Microsoft Python Language Server instead of jedi
+call coc#config('python', {
+\   'jediEnabled': v:false,
+\   'pythonPath': split(execute('!which python'), '\n')[-1]
+\ })
+
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
