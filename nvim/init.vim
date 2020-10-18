@@ -33,7 +33,6 @@ set noswapfile
 set nowrap
 set smartcase
 set incsearch
-"set colorcolumn=80
 
 " Use ripgrep
 nnoremap <C-p> :Rg<Cr>
