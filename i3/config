@@ -6,51 +6,51 @@
 set $mod Mod1
 
 # Window bar fonts
-font pango:Hack Regular 11, DejaVu Sans Mono 10
+font pango:Anonymous Pro 11, DejaVu Sans Mono 10
 
 # i3-gaps
-for_window [class=".*"] border pixel 3
-gaps inner 7
+#for_window [class=".*"] border pixel 3
+#gaps inner 7
 #smart_gaps on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Take screenshots with PrintScreen
-bindsym Print exec xfce4-screenshooter -f -s $HOME/Pictures
+bindsym Shift+Print exec gnome-screenshot -a
 
 # Some windows may still be opened in tilling mode:
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # Autostart bluetooth
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 
 # start a Terminal
 bindsym $mod+Return exec alacritty
 
 # Background with nitrogen
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 
 # Volumeicon tray
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 
 # nm-applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Numlock on
-exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id numlockx on
 
 # kill focused window
-bindsym $mod+Shift+A kill
+bindsym $mod+Shift+q kill
 
 # i3lock
-bindsym --release Mod1+Shift+q exec slock
+bindsym --release Mod1+Shift+a exec swaylock
 
 # Launches rofi with Fira Code Medium font. Explanaition of the all the lines can be found here: 
 #
 # https://wiki.archlinux.org/index.php/Rofi
-bindsym Mod1+space exec --no-startup-id "rofi -show drun -font \\"Fira Sans Medium 11\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
+bindsym Mod1+space exec --no-startup-id "rofi -show drun -font \\"Anonymous Pro\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'" 
 
 # Change focus to windows using the cursor keys.
 bindsym $mod+Left focus left
@@ -164,29 +164,29 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Color settings
-set $base00 #181818
-set $base01 #282828
-set $base02 #383838
-set $base03 #585858
-set $base04 #b8b8b8
-set $base05 #d8d8d8
-set $base06 #e8e8e8
-set $base07 #f8f8f8
-set $base08 #ab4642
-set $base09 #dc9656
-set $base0A #f7ca88
-set $base0B #a1b56c
-set $base0C #86c1b9
-set $base0D #7cafc2
-set $base0E #ba8baf
-set $base0F #a16946
-
-# Basic color configuration using the Base16 variables for windows and borders.
-# Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0C
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
+## Color settings
+#set $base00 #181818
+#set $base01 #282828
+#set $base02 #383838
+#set $base03 #585858
+#set $base04 #b8b8b8
+#set $base05 #d8d8d8
+#set $base06 #e8e8e8
+#set $base07 #f8f8f8
+#set $base08 #ab4642
+#set $base09 #dc9656
+#set $base0A #f7ca88
+#set $base0B #a1b56c
+#set $base0C #86c1b9
+#set $base0D #7cafc2
+#set $base0E #ba8baf
+#set $base0F #a16946
+#
+## Basic color configuration using the Base16 variables for windows and borders.
+## Property Name         Border  BG      Text    Indicator Child Border
+#client.focused          $base05 $base0D $base00 $base0D $base0C
+#client.focused_inactive $base01 $base01 $base05 $base03 $base01
+#client.unfocused        $base01 $base00 $base05 $base01 $base01
+#client.urgent           $base08 $base08 $base00 $base08 $base08
+#client.placeholder      $base00 $base00 $base05 $base00 $base00
+#client.background       $base07
