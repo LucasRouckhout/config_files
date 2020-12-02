@@ -1,12 +1,13 @@
 font:
-  size: 12
+  size: 11
 
   normal:
     family: Anonymous Pro
 
 colors:
   primary:
-    background: '0x282828'
+    #background: '0x282828'
+    background: '0x1c1c1c'
     foreground: '0xdfbf8e'
 
   normal:
