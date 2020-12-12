@@ -51,6 +51,8 @@ export PATH="~/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
+export PATH="/usr/bin:$PATH"
+export GOPATH=$HOME/go
 
 # Tell Antigen that you're done.
 antigen apply
