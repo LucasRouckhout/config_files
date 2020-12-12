@@ -6,7 +6,7 @@
 set $mod Mod1
 
 # Window bar fonts
-font pango:Anonymous Pro 11, DejaVu Sans Mono 10
+font pango:Anonymous Pro, DejaVu Sans Mono 10
 
 # i3-gaps
 #for_window [class=".*"] border pixel 3
@@ -30,13 +30,13 @@ for_window [window_role="task_dialog"] floating enable
 bindsym $mod+Return exec alacritty
 
 # Background with nitrogen
-#exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
 # Volumeicon tray
-#exec --no-startup-id volumeicon
+exec --no-startup-id volumeicon
 
 # nm-applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Numlock on
 #exec_always --no-startup-id numlockx on
@@ -45,7 +45,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # i3lock
-bindsym --release Mod1+Shift+a exec swaylock
+bindsym --release Mod1+Shift+a exec slock
 
 # Launches rofi with Fira Code Medium font. Explanaition of the all the lines can be found here: 
 #
