@@ -17,10 +17,12 @@ Plug 'vim-scripts/mako.vim'
 Plug 'mrk21/yaml-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 " Basic settings
-syntax on
+syntax enable
+filetype plugin indent on
 set noerrorbells
 set nu
 set cindent
@@ -63,6 +65,11 @@ map <C-n> :NERDTreeToggle<CR>
 " Coc LSP completion settings.
 set cmdheight=2
 nmap <silent>gd <Plug>(coc-definition)
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Automatically organize go imports on save
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
