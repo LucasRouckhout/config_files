@@ -18,6 +18,7 @@ Plug 'mrk21/yaml-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 " Basic settings
