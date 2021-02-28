@@ -15,7 +15,9 @@ sudo apt install zsh git build-essential \
     neovim \
     ripgrep \
     ttf-anonymous-pro \
-    tmux
+    tmux \
+    nodejs \
+    npm
 
 # Installing Oh My ZSH if it is not yet
 if [[ ! -f ~/.zshrc ]]; 
@@ -38,11 +40,11 @@ cp nvim/init.vim ~/.config/nvim/
 vim +PluginInstall +qall
 
 # Installing Alacritty
-sudo add-apt-repository ppa:mmstick76/alacritty
-sudo apt-get update
-sudo apt install alacritty
-mkdir -p ~/.config/alacritty
-cp alacritty/alacritty.yml ~/.config/alacritty/
+#sudo add-apt-repository ppa:mmstick76/alacritty
+#sudo apt-get update
+#sudo apt install alacritty
+#mkdir -p ~/.config/alacritty
+#cp alacritty/alacritty.yml ~/.config/alacritty/
 
 # Installing tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
