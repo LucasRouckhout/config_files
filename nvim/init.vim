@@ -20,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'elixir-editors/vim-elixir'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'sophacles/vim-bundle-mako'
 call plug#end()
 
 " Basic settings
@@ -56,6 +57,14 @@ call coc#config('python', {
 \   'jediEnabled': v:false,
 \   'pythonPath': split(execute('!which python'), '\n')[-1]
 \ })
+
+" Reset the cursor style to whatever
+" the terminal emulator is setting
+" when exiting VIM.
+augroup restore_cursor_shape
+  autocmd!
+  au VimLeave * set guicursor=a:ver10-blinkoff0
+augroup END
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
