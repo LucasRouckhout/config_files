@@ -20,7 +20,7 @@ setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[b
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cargo docker python kubectl helm zsh-autosuggestions)
+plugins=(git cargo docker python kubectl helm zsh-autosuggestions ansible)
 
 source $ZSH/oh-my-zsh.sh
 
