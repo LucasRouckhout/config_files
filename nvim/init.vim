@@ -58,6 +58,9 @@ call coc#config('python', {
 \   'pythonPath': split(execute('!which python'), '\n')[-1]
 \ })
 
+" Correct comment highlighting for coc configuration file
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Reset the cursor style to whatever
 " the terminal emulator is setting
 " when exiting VIM.
