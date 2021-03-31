@@ -1,8 +1,8 @@
 font:
-  size: 13
+  size: 11
 
   normal:
-    family: Ubuntu mono
+    family: Anonymous Pro
 
 cursor:
   style: Beam
