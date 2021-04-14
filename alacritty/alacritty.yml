@@ -1,11 +1,12 @@
 font:
-  size: 11
+  size: 12
 
   normal:
     family: Anonymous Pro
+    #style: Bold
 
-cursor:
-  style: Beam
+#cursor:
+#  style: Beam
 
 colors:
   primary:

@@ -64,10 +64,10 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " Reset the cursor style to whatever
 " the terminal emulator is setting
 " when exiting VIM.
-augroup restore_cursor_shape
-  autocmd!
-  au VimLeave * set guicursor=a:ver10-blinkoff0
-augroup END
+"augroup restore_cursor_shape
+"  autocmd!
+"  au VimLeave * set guicursor=a:ver10-blinkoff0
+"augroup END
 
 " SuperTab pressing enter does completion and scroll down when pressing tab.
 let g:SuperTabCrMapping = 1
@@ -75,6 +75,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " NERDTree toggle with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+" NERDTree show hidden files
+let NERDTreeShowHidden=1
 
 " Coc LSP completion settings.
 set cmdheight=2
@@ -86,10 +89,13 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Automatically organize go imports on save
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+"autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Format code key-binding
 noremap <C-f> :Autoformat<CR>
 
 " Remeber where you were in buffer
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Add missing imports on save (golang)
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
