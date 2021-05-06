@@ -20,7 +20,7 @@ setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[b
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cargo docker python kubectl helm zsh-autosuggestions ansible)
+plugins=(git cargo docker python kubectl helm zsh-autosuggestions ansible golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,31 +44,15 @@ export PATH="/usr/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lucas/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/lucas/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/lucas/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/lucas/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-echo "
-  _  __            _   _
- | |/ /           | | | |
- | ' / _ __  _   _| |_| |__
- |  < | '_ \| | | | __| '_ \\
- | . \\| | | | |_| | |_| | | |
- |_|\\_\_| |_|\\__,_|\\__|_| |_|
-"
-
-DATE=$(date)
-
-echo "$DATE"
+#echo "  _  __            _   _
+# | |/ /           | | | |
+# | ' / _ __  _   _| |_| |__
+# |  < | '_ \| | | | __| '_ \\
+# | . \\| | | | |_| | |_| | | |
+# |_|\\_\_| |_|\\__,_|\\__|_| |_|
+#"
+#
+#DATE=$(date)
+#
+#echo "$DATE"
 
