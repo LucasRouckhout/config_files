@@ -1,8 +1,8 @@
 font:
-  size: 11
+  size: 10
 
-# normal:
-  #    family: Anonymous Pro
+  normal:
+    family: Fira Mono
     # style: Bold
 
 #cursor:
