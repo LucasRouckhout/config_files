@@ -27,7 +27,7 @@ call plug#end()
 syntax enable
 filetype plugin indent on
 set noerrorbells
-set nu
+set number relativenumber
 set cindent
 set tabstop=4 softtabstop=4
 set shiftwidth=4
