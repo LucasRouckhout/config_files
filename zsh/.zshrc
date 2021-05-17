@@ -14,13 +14,17 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd() { vcs_info }
 setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b \$vcs_info_msg_0_"
 
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cargo docker python kubectl helm zsh-autosuggestions ansible golang ansible)
+plugins=(git cargo docker python kubectl helm zsh-autosuggestions ansible golang ansible pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,23 +40,13 @@ alias vim="nvim"
 alias ll="ls -hAl"
 alias l="ls -hal"
 
-# Export statements
+# Export statements for PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH="/usr/bin:$PATH"
+
+# Set GOPATH
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
-
-#echo "  _  __            _   _
-# | |/ /           | | | |
-# | ' / _ __  _   _| |_| |__
-# |  < | '_ \| | | | __| '_ \\
-# | . \\| | | | |_| | |_| | | |
-# |_|\\_\_| |_|\\__,_|\\__|_| |_|
-#"
-#
-#DATE=$(date)
-#
-#echo "$DATE"
 
