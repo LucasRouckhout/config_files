@@ -11,15 +11,20 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%{%F{red}%}%u%{%f%}%f '
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-precmd() { vcs_info }
+# precmd() { vcs_info }
 setopt PROMPT_SUBST; PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b \$vcs_info_msg_0_"
 
+# Export statements for PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Pyenv prompt
@@ -30,6 +35,7 @@ function updatePrompt {
     else
         export PS1=$BASE_PROMPT
     fi
+    vcs_info
 }
 export PROMPT_COMMAND='updatePrompt'
 precmd() { eval '$PROMPT_COMMAND' } # this line is necessary for zsh
@@ -54,12 +60,6 @@ fi
 alias vim="nvim"
 alias ll="ls -hAl"
 alias l="ls -hal"
-
-# Export statements for PATH
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH=$HOME/.local/bin:$PATH
-export PATH="/usr/bin:$PATH"
 
 # Set GOPATH
 export GOPATH=$HOME/go
