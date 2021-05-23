@@ -65,3 +65,6 @@ alias l="ls -hal"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
