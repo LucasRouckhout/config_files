@@ -2,11 +2,8 @@ font:
   size: 11
 
   normal:
-    family: Anonymous Pro
-    #style: Bold
-
-#cursor:
-#  style: Beam
+    family: Iosevka Term
+    style: Medium
 
 colors:
   primary:
